@@ -59,9 +59,8 @@ session_start();
 
 <body>
   <div class="container">
-    <h1 class="text-center mt-5">Hasil Diagnosa Penyakit Lumpuh Bebek</h1>
+    <h1 class="text-center mt-5">Hasil Diagnosa Penyakit ISPA</h1>
     <?php
-    $koneksi = mysqli_connect("localhost", "root", "", "dbpakar");
 
     // cek koneksi
     if (mysqli_connect_errno()) {

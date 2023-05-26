@@ -66,7 +66,7 @@ include "./koneksi.php";
                   <img src="assets/img/logo.png" alt="">
                   <span class="d-none d-lg-block">Sistem Pakar</span>
                 </a> -->
-                <h5 class="d-none d-lg-block">Sistem Pakar Penyakit Lumpuh Bebek</h5>
+                <h5 class="d-none d-lg-block">Sistem Pakar Penyakit ISPA</h5>
               </div><!-- End Logo -->
 
               <div class="card mb-3">
@@ -74,12 +74,9 @@ include "./koneksi.php";
                   <div class="pt-2 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Login Admin</h5>
                   </div>
-                  <?php
-                  if (isset($_GET['pesan'])) {
-                  ?>
+                  <?php if (isset($_GET['pesan'])) { ?>
                     <p class="mt-0 text-center" style="color: red; font-style: italic;">Maaf, Username / Password Salah</p>
-                  <?php }
-                  ?>
+                  <?php } ?>
 
                   <form action="./loginkoneksi.php" method="POST" class="row g-3">
 
@@ -106,7 +103,7 @@ include "./koneksi.php";
               </div>
 
               <div class="credits">
-                Dibuat dengan penuh cinta oleh <a href="">Kelompok 1</a>
+                &copy; <?= date('Y') ?> M. Taufiq Hidayatuloh (2113191036)
               </div>
             </div>
           </div>

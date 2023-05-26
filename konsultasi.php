@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sistem Pakar Penyakit Lumpuh Bebek</title>
+  <title>Sistem Pakar Penyakit ISPA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
       <div class="mt-4">
         <a href="./index.php" type="button" class="btn btn-outline-danger btn-sm ms-3"><i class="bi bi-box-arrow-left"></i> Kembali</a>
       </div>
-      <h4 class="text-dark d-flex justify-content-center mt-4">Proses Konsultasi Penyakit Lumpuh Bebek</h4>
+      <h4 class="text-dark d-flex justify-content-center mt-4">Proses Konsultasi Penyakit ISPA</h4>
       <div class="card-body">
         <div class="bg-info rounded-1">
           <h3 class="mt-4 ms-2 p-1">Petunjuk Pengisian</h3>
@@ -63,8 +63,6 @@
 
         <h5 class="text-secondary text-center mt-4">Pilih Gejala</h5>
         <?php
-        $koneksi = mysqli_connect("localhost", "root", "", "dbpakar");
-
         // Check connection
         if (mysqli_connect_errno()) {
           echo "Koneksi database gagal : " . mysqli_connect_error();
@@ -73,7 +71,6 @@
         <form action="./hasilkonsultasi.php" method="POST">
           <?php
           $sqli = "SELECT * FROM tb_gejala";
-          // $result = mysqli_query($koneksi, $sqli);
           $result = $koneksi->query($sqli);
           if (isset($_POST['bukti'])) {
             if (count($_POST['bukti']) < 2) {
@@ -116,19 +113,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/chart.js/chart.min.js"></script>
-  <script src="../assets/vendor/echarts/echarts.min.js"></script>
-  <script src="../assets/vendor/quill/quill.min.js"></script>
-  <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
-  <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
 
 </body>
 
