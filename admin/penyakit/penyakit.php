@@ -91,7 +91,7 @@
         <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../penyakit/penyakit.php" class="active">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit dan Saran</span>
             </a>
           </li>
           <li>
@@ -109,7 +109,7 @@
         </a>
       </li><!-- End Profile Page Nav -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -120,7 +120,7 @@
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li>End Forms Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="javascript:;" data-bs-toggle="modal" data-bs-target="#logoutmodal">
           <i class="bi bi-box-arrow-in-right"></i>
@@ -133,12 +133,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Data Penyakit dan Solusi</h1>
+      <h1>Data Penyakit dan Saran</h1>
       <nav style="--bs-breadcrumb-divider: '>';">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Admin</a></li>
           <li class="breadcrumb-item">Master Data</li>
-          <li class="breadcrumb-item active">Data Penyakit dan Solusi</li>
+          <li class="breadcrumb-item active">Data Penyakit dan Saran</li>
         </ol>
       </nav>
       <hr>
@@ -160,7 +160,7 @@
                 <th>Kode Penyakit</th>
                 <th>Nama Penyakit</th>
                 <th>Definisi</th>
-                <th>Solusi</th>
+                <th>Saran</th>
                 <th>Edit</th>
                 <th>Delete<input type="hidden" id="texthapus"></th>
               </tr>
@@ -197,7 +197,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title mx-auto">Tambah Data Penyakit & Solusi</h5>
+          <h5 class="modal-title mx-auto">Tambah Data Penyakit & Saran</h5>
         </div>
         <div class="modal-body">
           <form method="post" action="./simpanpenyakit.php">
@@ -214,7 +214,7 @@
               <textarea class="form-control" rows="3" id="definisi" name="definisi"></textarea>
             </div>
             <div class="form-group">
-              <label for="solusi">Solusi Penyakit :</label>
+              <label for="solusi">Saran Penyakit :</label>
               <textarea class="form-control" rows="3" id="solusi" name="solusi"></textarea>
             </div>
             <div class="d-grid gap-2">

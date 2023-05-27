@@ -33,7 +33,7 @@ if ($kdubah != "") {
 
   <div class="card col-md-6 mx-auto mt-5">
     <div class="card-body">
-      <h4 class="text-center">Edit Data Penyakit & Solusi</h4>
+      <h4 class="text-center">Edit Data Penyakit & Saran</h4>
       <form method="post" action="./editpenyakit2.php">
         <div class="form-group mb-2">
           <label for="kdpenyakit">Kode Penyakit :</label>
@@ -49,7 +49,7 @@ if ($kdubah != "") {
           <textarea class="form-control" rows="3" id="edit_definisi" name="edit_definisi"><?php echo $edit_definisi; ?></textarea>
         </div>
         <div class="form-group">
-          <label for="solusi">Solusi Penyakit :</label>
+          <label for="solusi">Saran Penyakit :</label>
           <textarea class="form-control" rows="3" id="edit_solusi" name="edit_solusi"><?php echo $edit_solusi; ?></textarea>
         </div>
         <div class="d-grid gap-2">

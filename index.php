@@ -95,7 +95,7 @@
         <div class="container-fluid ms-5">
           <h1 class="fw-bold datang">Selamat Datang</h1>
           <!-- <h3 class="fw-bold">Sistem Pakar penyakit ISPA <br> dengan Metode Dempster Shafer</h3> -->
-          <p>Sistem Pakar penyakit Lumpuh Bebek ini adalah sebuah sistem yang digunakan <br> untuk mendiagnosa awal jenis penyakit yang menyerang pada bebek berdasarkan <br> gejala yang dialami bebek. Proses diagnosa dengan menentukan gejala-gejala yang <br> terjadi pada bebek, dengan menggunakan metode Dempster Shafer maka sistem dapat <br> memberikan keputusan tentang hasil diagnosa awal.</p>
+          <p>Sistem Pakar Diagnosis Penyakit infeksi saluran pernapasan akut (ISPA) ini adalah sebuah sistem yang digunakan untuk mendiagnosis awal jenis penyakit yang menyerang pada pasien berdasarkan gejala yang dialami pasien  dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan keputusan tentang hasil diagnosis awal.</p>
           <a href="./konsultasi.php" type="button" class="konsul">Mulai Konsultasi</a>
         </div>
       </div>

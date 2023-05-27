@@ -76,7 +76,7 @@ if ($_SESSION['status'] != "login") {
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="./penyakit/penyakit.php">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit dan Saran</span>
             </a>
           </li>
           <li>
@@ -94,7 +94,7 @@ if ($_SESSION['status'] != "login") {
         </a>
       </li><!-- End Profile Page Nav -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-journal-text"></i><span>Laporan</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
@@ -105,7 +105,7 @@ if ($_SESSION['status'] != "login") {
             </a>
           </li>
         </ul>
-      </li><!-- End Forms Nav -->
+      </li>End Forms Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="javascript:;" data-bs-toggle="modal" data-bs-target="#logoutmodal">
           <i class="bi bi-box-arrow-in-right"></i>
@@ -131,10 +131,7 @@ if ($_SESSION['status'] != "login") {
     <section>
       <h1>Selamat Datang Admin</h1>
       <br>
-      <p>Sistem Pakar penyakit Lumpuh Bebek ini adalah sebuah sistem yang digunakan untuk mendiagnosa awal jenis
-        penyakit yang menyerang pada bebek berdasarkan gejala yang dialami bebek. Proses diagnosa dengan menentukan
-        gejala-gejala yang terjadi pada bebek, dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan
-        keputusan tentang hasil diagnosa awal.</p>
+      <p>Sistem Pakar Diagnosis Penyakit infeksi saluran pernapasan akut (ISPA) ini adalah sebuah sistem yang digunakan untuk mendiagnosis awal jenis penyakit yang menyerang pada pasien berdasarkan gejala yang dialami pasien  dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan keputusan tentang hasil diagnosis awal.</p>
     </section>
   </main><!-- End #main -->
 

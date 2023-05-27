@@ -83,7 +83,7 @@
         <ul id="components-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
           <li>
             <a href="../penyakit/penyakit.php">
-              <span>Data Penyakit dan Solusi</span>
+              <span>Data Penyakit dan Saran</span>
             </a>
           </li>
           <li>
