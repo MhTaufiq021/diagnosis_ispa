@@ -68,7 +68,8 @@
           echo "Koneksi database gagal : " . mysqli_connect_error();
         }
         ?>
-        <form action="./hasilkonsultasi.php" method="POST">
+        <!-- <form action="./hasilkonsultasi.php" method="POST"> -->
+        <form action="#" method="POST">
           <?php
           $sqli = "SELECT * FROM tb_gejala";
           $result = $koneksi->query($sqli);
