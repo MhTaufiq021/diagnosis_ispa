@@ -82,6 +82,7 @@
           }
 
           // mengambil baris berikutnya menjadi objek
+          $counter = 1;
           while ($row = $result->fetch_object()) {
             echo "<hr> ";
             echo "<label for='checkbox" . $row->id . "' style='cursor: pointer;'>";
@@ -89,7 +90,8 @@
             if (isset($_POST['bukti'])) {
               echo (in_array($row->id, $_POST['bukti']) ? " checked" : "");
             }
-            echo ">&ensp; " . $row->id . ". " . $row->gejala . "</label><br>";
+            echo ">&ensp; " . $counter . ". " . $row->gejala . "</label><br>";
+            $counter++;
           }
           ?>
           <div class="mt-4">

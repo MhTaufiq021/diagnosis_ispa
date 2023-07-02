@@ -102,12 +102,12 @@
         </ul>
       </li><!-- End Components Nav -->
 
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="../rules/rules.php">
           <i class="bi bi-boxes"></i>
           <span>Rule Dempster Shafer</span>
         </a>
-      </li> -->
+      </li>
       <!-- End Profile Page Nav -->
 
       <!-- <li class="nav-item">

@@ -102,12 +102,12 @@
         </ul>
       </li><!-- End Components Nav -->
 
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="../rules/rules.php">
           <i class="bi bi-boxes"></i>
           <span>Rule Dempster Shafer</span>
         </a>
-      </li> -->
+      </li>
       <!-- End Profile Page Nav -->
 
       <!-- <li class="nav-item">
@@ -169,7 +169,7 @@
             <tbody>
               <?php
               include "../koneksi.php";
-              $sql = "SELECT * FROM tb_penyakit  ORDER BY kdpenyakit";
+              $sql = "SELECT * FROM tb_penyakit  ORDER BY CAST(SUBSTRING(kdpenyakit, 2) AS SIGNED)";
               $qry = mysqli_query($koneksi, $sql) or die("SQL Error" . mysqli_error($koneksi));
               $no = 0;
               while ($data = mysqli_fetch_array($qry)) {
