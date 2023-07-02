@@ -279,7 +279,7 @@
                   $no++;
                 ?>
                   <tr>
-                    <td valign="top" class="text-center"><?php echo $row['id_gejala']; ?></td>
+                    <td valign="top" class="text-center"><?php echo $no; ?></td>
                     <td>
                       <?php $idG = $row['id_gejala'];
                       print_r($arrGejala["$idG"]);

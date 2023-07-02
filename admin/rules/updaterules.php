@@ -55,52 +55,56 @@
     <?php
     include "../koneksi.php";
     $kd_penyakit = $_POST['daftarpenyakit'];
-
-    // ambil semua data rule yang belum diupdate
-    $querySelect = "SELECT * FROM tb_rules WHERE id_penyakit='$kd_penyakit' AND id_gejala NOT IN (" . implode(',', $_POST['gejala']) . ")";
-    $resultSelect = mysqli_query($koneksi, $querySelect);
-    $dataRule = array();
-    while ($row = mysqli_fetch_array($resultSelect)) {
-      $dataRule[] = array(
-        'id_penyakit' => $row['id_penyakit'],
-        'id_gejala' => $row['id_gejala'],
-        'belief' => $row['belief']
-      );
-    }
-
-    // // hapus semua data rule yang terkait dengan id_penyakit yang sesuai
-    // $queryDel = mysqli_query($koneksi, "DELETE FROM tb_rules WHERE id_penyakit='$kd_penyakit' ");
-
-    // hapus data yang tidak terdapat di dalam array yang didapat dari form dengan metode POST
-    foreach ($dataRule as $rule) {
-      $queryDel = "DELETE FROM tb_rules WHERE id_penyakit='{$rule['id_penyakit']}' AND id_gejala='{$rule['id_gejala']}'";
+    if (isset($_POST['gejala']) == false) {
+      $queryDel = "DELETE FROM tb_rules WHERE id_penyakit='$kd_penyakit'";
       $resultDel = mysqli_query($koneksi, $queryDel);
-    }
-
-    if (isset($_POST['gejala'])) {
-      $seleksi   = htmlentities(implode(',', $_POST['gejala']));
-    }
-    $data = $seleksi;
-
-    $barisinputan = $data;
-    $barisinputan = explode(",", $barisinputan);
-
-    for ($mulai = 0; $mulai < count($barisinputan); $mulai++) {
-      $inputan = $barisinputan[$mulai];
-
-      // cek apakah data gejala terkait telah diubah atau tidak
-      $query = "SELECT * FROM tb_rules WHERE id_penyakit='$kd_penyakit' AND id_gejala='$inputan'";
-      $result = mysqli_query($koneksi, $query);
-      $row = mysqli_fetch_array($result);
-
-      // jika data gejala terkait belum ada, tambahkan data baru dengan nilai belief 0
-      if (!$row) {
-        $sql = "INSERT INTO tb_rules (id_penyakit,id_gejala,belief) VALUES ('$kd_penyakit','$inputan','0')";
-      } else {
-        // jika data gejala terkait sudah ada, gunakan query UPDATE untuk mengubah nilai belief saja
-        $sql = "UPDATE tb_rules SET belief='{$row['belief']}' WHERE id_penyakit='$kd_penyakit' AND id_gejala='$inputan'";
+    } else {
+      // ambil semua data rule yang belum diupdate
+      $querySelect = "SELECT * FROM tb_rules WHERE id_penyakit='$kd_penyakit' AND id_gejala NOT IN (" . implode(',', $_POST['gejala']) . ")";
+      $resultSelect = mysqli_query($koneksi, $querySelect);
+      $dataRule = array();
+      while ($row = mysqli_fetch_array($resultSelect)) {
+        $dataRule[] = array(
+          'id_penyakit' => $row['id_penyakit'],
+          'id_gejala' => $row['id_gejala'],
+          'belief' => $row['belief']
+        );
       }
-      $query = mysqli_query($koneksi, $sql) or die(mysqli_error($koneksi));
+
+      // // hapus semua data rule yang terkait dengan id_penyakit yang sesuai
+      // $queryDel = mysqli_query($koneksi, "DELETE FROM tb_rules WHERE id_penyakit='$kd_penyakit' ");
+
+      // hapus data yang tidak terdapat di dalam array yang didapat dari form dengan metode POST
+      foreach ($dataRule as $rule) {
+        $queryDel = "DELETE FROM tb_rules WHERE id_penyakit='{$rule['id_penyakit']}' AND id_gejala='{$rule['id_gejala']}'";
+        $resultDel = mysqli_query($koneksi, $queryDel);
+      }
+
+      if (isset($_POST['gejala'])) {
+        $seleksi   = htmlentities(implode(',', $_POST['gejala']));
+      }
+      $data = $seleksi;
+
+      $barisinputan = $data;
+      $barisinputan = explode(",", $barisinputan);
+
+      for ($mulai = 0; $mulai < count($barisinputan); $mulai++) {
+        $inputan = $barisinputan[$mulai];
+
+        // cek apakah data gejala terkait telah diubah atau tidak
+        $query = "SELECT * FROM tb_rules WHERE id_penyakit='$kd_penyakit' AND id_gejala='$inputan'";
+        $result = mysqli_query($koneksi, $query);
+        $row = mysqli_fetch_array($result);
+
+        // jika data gejala terkait belum ada, tambahkan data baru dengan nilai belief 0
+        if (!$row) {
+          $sql = "INSERT INTO tb_rules (id_penyakit,id_gejala,belief) VALUES ('$kd_penyakit','$inputan','0')";
+        } else {
+          // jika data gejala terkait sudah ada, gunakan query UPDATE untuk mengubah nilai belief saja
+          $sql = "UPDATE tb_rules SET belief='{$row['belief']}' WHERE id_penyakit='$kd_penyakit' AND id_gejala='$inputan'";
+        }
+        $query = mysqli_query($koneksi, $sql) or die(mysqli_error($koneksi));
+      }
     }
     echo "<br><br><br>";
     echo "<center><strong>Data Rule Berhasil di Update</strong></center>";

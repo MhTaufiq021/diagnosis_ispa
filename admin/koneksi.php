@@ -1,5 +1,5 @@
 <?php
-$koneksi = mysqli_connect("localhost", "satu9351_iseplutpi", "satu9351_iseplutpi", "satu9351_diagnosis_ispa");
+$koneksi = mysqli_connect("localhost", "root", "", "dbpakar");
 
 // Check connection
 if (mysqli_connect_errno()) {
