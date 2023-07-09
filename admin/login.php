@@ -103,7 +103,7 @@ include "./koneksi.php";
               </div>
 
               <div class="credits">
-                &copy; <?= date('Y') ?> M. Taufiq Hidayatuloh (2113191036)
+                &copy; <?= date('Y') ?> Muhamad Taufiq Hidayatuloh (2113191036)
               </div>
             </div>
           </div>
