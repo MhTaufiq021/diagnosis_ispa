@@ -58,7 +58,7 @@
       <div class="card-body">
         <div class="bg-info rounded-1">
           <h3 class="mt-4 ms-2 p-1">Petunjuk Pengisian</h3>
-          <p class="ms-3 me-2 pb-2">Proses konsultasi terdiri dari 15 pertanyaan. Selanjutnya, anda diminta untuk menjawab dengan cara klik opsi gejalanya apabila gejala tersebut sesuai dengan kondisi yang terjadi. Bacalah dan jawab setiap gejala dengan teliti dan seksama.</p>
+          <p class="ms-3 me-2 pb-2">Proses konsultasi terdiri dari <span id="jml-pertanyaan"></span> pertanyaan. Selanjutnya, anda diminta untuk menjawab dengan cara klik opsi gejalanya apabila gejala tersebut sesuai dengan kondisi yang terjadi. Bacalah dan jawab setiap gejala dengan teliti dan seksama.</p>
         </div>
 
         <h5 class="text-secondary text-center mt-4">Pilih Gejala</h5>
@@ -115,6 +115,9 @@
       </div>
     </div>
   </section>
+  <script>
+    document.getElementById('jml-pertanyaan').innerHTML= <?= $counter ?> - 1;
+  </script>
 
 </body>
 

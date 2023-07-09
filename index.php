@@ -84,7 +84,9 @@
     </div>
   </nav>
   <!-- Akhir Navbar -->
-  <br> <br> <br> <br> <br> <br>
+  <div class="d-none d-lg-block">
+    <br> <br>
+  </div>
 
   <section>
     <!-- Awal Container -->
@@ -92,11 +94,21 @@
       <!-- Jumbotron -->
       <div class="bg-light p-5 mb-4 rounded">
         <!-- <img src="" class="float-end me-5" width="400px"> -->
-        <div class="container-fluid ms-5">
-          <h1 class="fw-bold datang">Selamat Datang</h1>
-          <!-- <h3 class="fw-bold">Sistem Pakar penyakit ISPA <br> dengan Metode Dempster Shafer</h3> -->
-          <p>Sistem Pakar Diagnosis Penyakit infeksi saluran pernapasan akut (ISPA) ini adalah sebuah sistem yang digunakan untuk mendiagnosis awal jenis penyakit yang menyerang pada pasien berdasarkan gejala yang dialami pasien  dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan keputusan tentang hasil diagnosis awal.</p>
-          <a href="./konsultasi.php" type="button" class="konsul">Mulai Konsultasi</a>
+        <div class="container-fluid ms-lg-5">
+          <div class="row d-flex flex-row-reverse">  
+            <div class="col-lg-5">
+                <img src="/assets/hero.webp" alt="Hero" style="width:100%">
+            </div>
+            <div class="col-lg-7">
+              <div class="d-none d-lg-block">
+                <br> <br> <br> <br>
+              </div>
+              <h1 class="fw-bold datang">Selamat Datang</h1>
+              <!-- <h3 class="fw-bold">Sistem Pakar penyakit ISPA <br> dengan Metode Dempster Shafer</h3> -->
+              <p>Sistem Pakar Diagnosis Penyakit infeksi saluran pernapasan akut (ISPA) ini adalah sebuah sistem yang digunakan untuk mendiagnosis awal jenis penyakit yang menyerang pada pasien berdasarkan gejala yang dialami pasien  dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan keputusan tentang hasil diagnosis awal.</p>
+              <a href="./konsultasi.php" type="button" class="konsul">Mulai Konsultasi</a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Akhir jumbotron -->
