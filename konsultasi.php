@@ -68,8 +68,7 @@
           echo "Koneksi database gagal : " . mysqli_connect_error();
         }
         ?>
-        <!-- <form action="./hasilkonsultasi.php" method="POST"> -->
-        <form action="#" method="POST">
+        <form action="./hasilkonsultasi.php" method="POST">
           <?php
           $sqli = "SELECT * FROM tb_gejala";
           $result = $koneksi->query($sqli);
@@ -95,7 +94,7 @@
           }
           ?>
           <div class="mt-4">
-            <button class="btn btn-outline-success btn-md" onclick="return validateForm();" style="width: 130px; height: 40px; cursor: pointer; box-shadow: 0 0 10px rgb(255, 250, 240);"><i class="bi bi-check-lg"></i> Diagnosa</button>
+            <button class="btn btn-outline-success btn-md" onclick="return validateForm();" style="width: 130px; height: 40px; cursor: pointer; box-shadow: 0 0 10px rgb(255, 250, 240);"><i class="bi bi-check-lg"></i> Diagnosis</button>
           </div>
         </form>
         <script>

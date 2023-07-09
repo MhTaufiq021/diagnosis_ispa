@@ -15,7 +15,7 @@ if ($_SESSION['status'] != "login") {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin - Sistem Pakar Penyakit Lumpuh Bebek</title>
+  <title>Admin - Sistem Pakar Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -46,7 +46,7 @@ if ($_SESSION['status'] != "login") {
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
-    <!-- <h4>Dashboard - Admin Diagnosa Penyakit Lumpuh Bebek</h4> -->
+    <!-- <h4>Dashboard - Admin Diagnosa Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</h4> -->
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
         <img src="../assets/img/logo.png" alt="logo">

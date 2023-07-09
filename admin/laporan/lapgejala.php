@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin - Sistem Pakar Penyakit Lumpuh Bebek</title>
+  <title>Admin - Sistem Pakar Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

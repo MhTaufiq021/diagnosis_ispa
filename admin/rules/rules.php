@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin - Sistem Pakar Penyakit Lumpuh Bebek</title>
+  <title>Admin - Sistem Pakar Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -192,7 +192,7 @@
 
             <div class="konten">
               <form id="form1" name="form1" method="post" action="./simpanrules.php" enctype="multipart/form-data" onsubmit="return validateForm()">
-                <h5 class="text-center">Tambah Rule Penyakit Lumpuh Bebek</h5>
+                <h5 class="text-center">Tambah Rule Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</h5>
                 <table class="tab" width="700" border="0" align="center" cellpadding="4" cellspacing="1" bordercolor="#F0F0F0" bgcolor="#fff">
                   <tr bgcolor="#FFFFFF">
                     <td><strong class="ms-2">Pilih Gejala</strong></td>
@@ -227,6 +227,7 @@
                           $sqlp = "SELECT * FROM tb_penyakit ORDER BY id";
                           $qryp = mysqli_query($koneksi, $sqlp)
                             or die("SQL Error: " . mysqli_error($koneksi));
+                            $counter = 1;
                           while ($datap = mysqli_fetch_array($qryp)) {
                             if ($datap['id'] == $kdsakit) {
                               $cek = "selected";
@@ -234,7 +235,8 @@
                               $cek = "";
                             }
                             $arrPenyakit["$datap[id]"] = $datap['nama_penyakit'];
-                            echo "<option value='$datap[id]' $cek>$datap[id]&nbsp;|&nbsp;$datap[nama_penyakit]</option>";
+                            echo "<option value='$datap[id]' $cek>{$counter}&nbsp;|&nbsp;$datap[nama_penyakit]</option>";
+                            $counter++;
                           }
                           ?>
                         </select><br><br>&nbsp;&nbsp;Nilai Belief
@@ -262,11 +264,12 @@
                   <?php
                   include "../koneksi.php";
                   $query_p = mysqli_query($koneksi, "SELECT id_penyakit FROM tb_rules GROUP BY id_penyakit");
+                  $counter = 1;
                   while ($data_p = mysqli_fetch_array($query_p)) {
                   ?>
                     <th class="text-center">
                       <?php $idp = $data_p['id_penyakit'];
-                      echo "$idp | ";
+                      echo ($counter++)." | ";
                       print_r($arrPenyakit["$idp"]); ?><br><a href="./editrules.php?kdpenyakit=<?php echo $data_p['id_penyakit']; ?>">Edit Rule</a></th><?php } ?>
                 </tr>
               </thead>

@@ -68,7 +68,7 @@
   <section>
     <div class="row mt-5 mx-auto">
       <div class="col-md-8 mt-2 mx-auto">
-        <h3 class="text-center mb-4">Edit Nilai Belief Penyakit Lumpuh Bebek</h3>
+        <h3 class="text-center mb-4">Edit Nilai Belief Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</h3>
         <?php
         include "../koneksi.php";
         $kd_gejala = $_GET['id_gejala'];

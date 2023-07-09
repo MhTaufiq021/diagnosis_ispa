@@ -59,7 +59,7 @@ session_start();
 
 <body>
   <div class="container">
-    <h1 class="text-center mt-5">Hasil Diagnosa Penyakit ISPA</h1>
+    <h1 class="text-center mt-5">Hasil Diagnosis Penyakit ISPA</h1>
     <?php
 
     // cek koneksi
@@ -183,7 +183,7 @@ session_start();
         $row = $result->fetch_row();
         echo "<br>";
         echo "<br>";
-        echo "<b>Kesimpulan Hasil Diagnosa :</b>";
+        echo "<b>Kesimpulan Hasil Diagnosis :</b>";
         echo "<br>";
         // echo "<br>";
         echo " <p class=\"diagnosa\">Terdeteksi penyakit <b>{$row[0]}</b> dengan derajat kepercayaan sebesar <b>" . round($densitas_baru[$codes[0]] * 100, 2) . "%</b></p>";
