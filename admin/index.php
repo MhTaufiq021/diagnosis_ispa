@@ -20,7 +20,7 @@ if ($_SESSION['status'] != "login") {
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/favicon.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -49,7 +49,7 @@ if ($_SESSION['status'] != "login") {
     <!-- <h4>Dashboard - Admin Diagnosa Penyakit Infeksi Saluran Pernafasan Akut (ISPA)</h4> -->
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.php" class="logo d-flex align-items-center">
-        <img src="../assets/img/logo.png" alt="logo">
+        <img src="../assets/img/logo2.png" alt="logo">
         <span class="d-none d-lg-block">Sistem Pakar</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -133,6 +133,9 @@ if ($_SESSION['status'] != "login") {
       <h1>Selamat Datang Admin</h1>
       <br>
       <p>Sistem Pakar Diagnosis Penyakit infeksi saluran pernapasan akut (ISPA) ini adalah sebuah sistem yang digunakan untuk mendiagnosis awal jenis penyakit yang menyerang pada pasien berdasarkan gejala yang dialami pasien  dengan menggunakan metode Dempster Shafer maka sistem dapat memberikan keputusan tentang hasil diagnosis awal.</p>
+      <hr>
+      <p>Skripsi: Sistem Pakar Diagnosis Penyakit Infeksi Saluran Pernapasan Akut (ISPA) Berbasis Web Menggunakan Metode Dempster Shafer</p>
+      <p>Muhamad Taufiq Hidayatuloh (2113191036)</p>
     </section>
   </main><!-- End #main -->
 

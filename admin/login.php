@@ -15,7 +15,7 @@ include "./koneksi.php";
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../../assets/img/favicon.png" rel="icon">
+  <link href="../../assets/img/favicon.ico" rel="icon">
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -63,7 +63,7 @@ include "./koneksi.php";
 
               <div class="d-flex justify-content-center py-4">
                 <!-- <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
+                  <img src="assets/img/logo2.png" alt="">
                   <span class="d-none d-lg-block">Sistem Pakar</span>
                 </a> -->
                 <h5 class="d-none d-lg-block">Sistem Pakar Penyakit ISPA</h5>
