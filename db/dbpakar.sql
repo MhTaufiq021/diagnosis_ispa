@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 10, 2023 at 12:00 AM
--- Server version: 10.5.20-MariaDB-cll-lve
+-- Generation Time: Aug 20, 2023 at 09:50 PM
+-- Server version: 10.6.14-MariaDB-cll-lve
 -- PHP Version: 8.1.16
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -44,7 +44,7 @@ CREATE TABLE `tb_gejala` (
   `id` int(11) NOT NULL,
   `kdgejala` varchar(3) DEFAULT NULL,
   `gejala` text DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Dumping data for table `tb_gejala`
@@ -98,7 +98,7 @@ CREATE TABLE `tb_penyakit` (
   `nama_penyakit` varchar(100) DEFAULT NULL,
   `definisi` text DEFAULT NULL,
   `solusi` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Dumping data for table `tb_penyakit`
@@ -127,7 +127,7 @@ CREATE TABLE `tb_rules` (
   `id_gejala` int(11) DEFAULT NULL,
   `id_penyakit` int(11) DEFAULT NULL,
   `belief` float DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 --
 -- Dumping data for table `tb_rules`
@@ -273,5 +273,5 @@ ALTER TABLE `tb_penyakit`
 -- AUTO_INCREMENT for table `tb_rules`
 --
 ALTER TABLE `tb_rules`
-  MODIFY `id_rules` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id_rules` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=121;
 COMMIT;
